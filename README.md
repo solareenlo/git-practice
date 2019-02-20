@@ -137,3 +137,32 @@ git branch
 git checkout master
 git branch
 ```
+
+## barnchをmergeする
+```bash
+# master branchにhoge branchをmergeさせたい
+git checkout master
+git merge hoge
+
+# いらなくなったhoge branchを削除する
+git branch -d hoge
+
+# masterにmerge済みのbranchを確認する
+git checkout master
+git branch --merged
+
+# masterにまだmergeしていないbranchを確認する
+git checkout master
+git branch --no-merged
+
+# 作業途中でmergeしたときに, まだcommitしたくないときは, stashを使って一時的に変更内容を退避させる.
+git stash save 'コメント'
+
+# stashで退避させた情報の一覧表示
+git stash list
+
+# 退避させるたびに, この一覧の上に退避データが積み上がっていく.
+# 対比した内容を取り出すには
+git stash pop
+# 引数をつけない場合, listで表示された一番上の内容が取り出される.
+```
