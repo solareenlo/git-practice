@@ -50,3 +50,12 @@ git log -p
 # どのファイルが変更なったかを見る
 git log --stat
 ```
+
+## 現在の状態を把握する
+```bash
+# 現在の状態を見る
+git status
+
+# ファイルの変更を無かったことにする
+git checkout -- index.html
+```
