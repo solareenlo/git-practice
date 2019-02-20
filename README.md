@@ -16,6 +16,9 @@ git config --global user.email "solareenlo@test.com"
 # gitを色づける
 git config --global color.ui true
 
+# commitしたときのエディタをvimに設定する
+git config --global core.editor vim
+
 # gitの設定一覧を見る
 git config -l
 
