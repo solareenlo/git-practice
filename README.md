@@ -120,3 +120,20 @@ git reset --hard hash値(最低7桁)
 git reset --hard ORIG_HEAD
 # ORIG_HEADには前回取り消されたHEADの情報が1つだけ入っている.
 ```
+
+## branchを使う
+```bash
+# 現在のbranchを確認する
+git branch
+
+# 新しいbranch hogeを作成する
+git branch hoge
+
+# hoge branchに移動する
+git checkout hoge
+git branch
+
+# master branchに戻る
+git checkout master
+git branch
+```
