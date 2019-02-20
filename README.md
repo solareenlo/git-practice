@@ -59,3 +59,12 @@ git status
 # ファイルの変更を無かったことにする
 git checkout -- index.html
 ```
+
+## 差分を確認する
+```bash
+# ファイルの差分を見る
+git diff
+
+# ステージングされたファイルの差分を見る
+git diff --cached
+```
