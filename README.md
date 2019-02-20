@@ -90,3 +90,14 @@ vim .gitignore
 # .gitignoreがある場所から遡ってはignoreされない.
 # ので, サブディレクトリだけ.gitignoreしたい場合は, サブディレクトリ内に.gitignoreを入れておく.
 ```
+
+## 直前のcommitを変更する
+```bash
+# 1つcommitする
+git commit -m 'コミットを1つ追加'
+
+# 直前のcommitを上書きする
+vim index.html
+git add .
+git commit --amend
+```
