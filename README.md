@@ -169,3 +169,23 @@ git stash list
 git stash pop
 # 引数をつけない場合, listで表示された一番上の内容が取り出される.
 ```
+
+## mergeの衝突を解消する
+```bash
+# branch切って, すぐにhogeに移動する
+git checkout -b hoge
+vim index.html
+git add .
+git commit -m 'hogeで変更したよ'
+git branch master
+vim index.html
+git add .
+git commit -m 'masterでも変更したよ'
+git merge hoge
+> CONFLICT (content): merge conflict in index.html
+vim index.html
+# index.htmlのいらないところを削除するだけ
+# hogeかmasterのどちらかの変更を残すということ.
+git add .
+git comit -m 'conflictを解消したよ'
+```
