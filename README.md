@@ -141,7 +141,7 @@ git checkout master
 git branch
 ```
 
-## barnchをmergeする
+## branchをmergeする
 ```bash
 # master branchにhoge branchをmergeさせたい
 git checkout master
