@@ -68,3 +68,15 @@ git diff
 # ステージングされたファイルの差分を見る
 git diff --cached
 ```
+
+## gitでのファイル操作
+```bash
+# 現在のディレクトリ以下全部のファイルをaddする
+git add .
+
+# gitでのファイル削除
+git rm index.html
+
+# gitでのファイル移動
+git mv index.html
+```
