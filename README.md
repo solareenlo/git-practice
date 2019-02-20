@@ -38,3 +38,15 @@ git commit
 # 変更のlogを見る
 git log
 ```
+
+## gitのlogを見る
+```bash
+# logをコンパクトに見る
+git log --oneline
+
+# logと共に変更内容も見る
+git log -p
+
+# どのファイルが変更なったかを見る
+git log --stat
+```
