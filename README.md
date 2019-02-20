@@ -80,3 +80,13 @@ git rm index.html
 # gitでのファイル移動
 git mv index.html
 ```
+
+## gitの管理に含めない方法
+```bash
+# .gitignoreファイルを作り, その中にgitに含めないファイルを記述する
+vim .gitignore
+*.log
+
+# .gitignoreがある場所から遡ってはignoreされない.
+# ので, サブディレクトリだけ.gitignoreしたい場合は, サブディレクトリ内に.gitignoreを入れておく.
+```
