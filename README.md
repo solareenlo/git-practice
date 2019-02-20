@@ -113,3 +113,10 @@ git reset --hard HEAD^
 # 指定したidにcommitを戻す
 git reset --hard hash値(最低7桁)
 ```
+
+## 過去のバージョンに戻る（２）
+```bash
+# commit変更したけど, やっぱり変更前のcommitに戻りたいときは
+git reset --hard ORIG_HEAD
+# ORIG_HEADには前回取り消されたHEADの情報が1つだけ入っている.
+```
