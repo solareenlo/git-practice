@@ -101,3 +101,15 @@ vim index.html
 git add .
 git commit --amend
 ```
+
+## 過去のバージョンに戻る（１）
+```bash
+# 作業ディレクトリもステージングエリアも直前のcommitへ戻す
+git reset --hard HEAD
+
+# 2つ前のcommitに戻る
+git reset --hard HEAD^
+
+# 指定したidにcommitを戻す
+git reset --hard hash値(最低7桁)
+```
