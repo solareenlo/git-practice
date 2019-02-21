@@ -207,3 +207,12 @@ git tag v0.9 id(hash値)
 # tagの削除
 git -d v0.9
 ```
+
+## エイリアスを付ける
+```bash
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.ci commit
+git config -l
+```
