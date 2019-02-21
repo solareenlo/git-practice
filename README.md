@@ -216,3 +216,58 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config -l
 ```
+
+## 初めての共同作業
+```bash
+# 共有リポジトリを作成
+# 共有リポジトリには.gitを付けるのが通例
+mkdir ourweb.git
+cd ourweb.git
+git init --bare
+# これで管理ファイルだけが管理され, commitとかはしない設定になる.
+
+# 別のリポジトリを現在のリポジトリにoriginとして登録する
+git remote add origin ~/path/to/ourweb.git
+git config -l
+> remote.origin.url=/home/path/to/ourweb.git
+
+# 登録した別のリポジトリ(origin)を削除する
+git remote rm origin
+
+# 現在のリポジトリ(master)の内容をremoteしたディレクトリ(origin)にpushする
+git push origin master
+# originにmasterをpushする.という意味.
+
+# ourweb.gitをmyweb2としてcloneして作業する
+git clone ~/path/to/ourweb.git myweb2
+cd myweb2
+git log
+vim index.html
+git add .
+git commit -m 'line2 added'
+git push origin master
+# 変更内容(master)をoriginにpushした
+
+# 別のユーザーが上記の変更をpullする
+git pull origin master
+git log
+```
+
+## 共同作業でコンフリクトが起こったら
+```bash
+# Aさんが先に変更を加えた
+vim index.html
+git commit -am 'line 3 added'
+git push origin master
+
+# Bさんも後から同様の場所に変更を加えた
+vim index.html
+git commit -am 'line third added'
+git push origin master
+> CONFLICT (content): Merge conflict in index.html
+# pushする前にpullしてまずはconflictを解消する
+git pull origin master
+vim index.html
+git commit -am 'conflict fixed'
+git push origin master
+```
