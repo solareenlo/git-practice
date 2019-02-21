@@ -189,3 +189,21 @@ vim index.html
 git add .
 git comit -m 'conflictを解消したよ'
 ```
+
+## tagを付ける
+```bash
+# 直前のcommitにidに代わるわかりやすいv1.0というtagを付ける
+git tag v1.0
+
+# tagを確認する
+git tag
+
+# tagを使ってcommit内容を確認する
+git show v1.0
+
+# 特定のcommitにtagを付ける
+git tag v0.9 id(hash値)
+
+# tagの削除
+git -d v0.9
+```
